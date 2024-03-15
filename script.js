@@ -142,7 +142,7 @@
 //     age = Number(age);
 
 //     if (age >= 18) {
-        // result.textContent = "You can caste a vote"
+// result.textContent = "You can caste a vote"
 //     }
 //     else {
 //         result.textContent = "You can't cast a vote"
@@ -226,12 +226,12 @@
 // }
 
 // Function = A section of resuable code.
-        // Declare a function onces, use it whenever you want
-        // Call the function to execute that code.
+// Declare a function onces, use it whenever you want
+// Call the function to execute that code.
 
 
 
-function happyBirthday(name, age){
+function happyBirthday(name, age) {
     console.log("Happy birthday to you!");
     console.log("Happy birthday to you dear!");
     console.log("Happy birthday to you darling!");
@@ -239,21 +239,21 @@ function happyBirthday(name, age){
     console.log(`Your age is ${age} years`);
 }
 
-happyBirthday("Manish",20);
-happyBirthday("Messi",36);
+happyBirthday("Manish", 20);
+happyBirthday("Messi", 36);
 
-function add(x,y){
-    let result = x+y;
+function add(x, y) {
+    let result = x + y;
     console.log(result);
 }
-add(2,3);
+add(2, 3);
 
-function function1 (){
+function function1() {
     let x = 1;
     console.log(x);
 }
 
-function function2 (){
+function function2() {
     let x = 2;
     console.log(x);
 }
@@ -262,7 +262,7 @@ function2();
 
 // Array
 
-let fruits = ["Apple","Banana","Mango"];
+let fruits = ["Apple", "Banana", "Mango"];
 fruits.push("Grapes")
 // fruits.pop()
 console.log(fruits[0]);
@@ -274,7 +274,26 @@ console.log(fruits.length)
 console.log(fruits.indexOf("Mango"));
 fruits.sort().reverse();
 
-for(let i=0; i<fruits.length; i++){
+for (let i = 0; i < fruits.length; i++) {
     console.log(fruits[i]);
 }
 fruits.sort().reverse();
+
+// Spread Operators
+
+let number = [1, 2, 3, 4, 5]
+let maximum = Math.max(...number)
+let minimum = Math.min(...number)
+console.log(maximum)
+console.log(minimum)
+
+let username = "Manish Gautam";
+let letters = [...username].join("+")
+console.log(letters)
+
+let fruit = ["banana","guava", "mama"]
+let vegetables = ["cabbage", "tomato","spanich"]
+
+let foods = [...fruit, ...vegetables, "eggs","milk"]
+
+console.log(foods)
