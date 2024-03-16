@@ -294,6 +294,46 @@ console.log(letters)
 let fruit = ["banana","guava", "mama"]
 let vegetables = ["cabbage", "tomato","spanich"]
 
-let foods = [...fruit, ...vegetables, "eggs","milk"]
+let food = [...fruit, ...vegetables, "eggs","milk"]
 
-console.log(foods)
+console.log(food)
+
+console.log("Rest parameters");
+
+function openFridge(...foods){
+    console.log(...foods);
+}
+
+function getFood(...foods) {
+    return foods;    
+}
+
+const food1 = "pizza"
+const food2 = "momo"
+const food3 = "burger"
+const food4 = "hotdog"
+
+// openFridge(food1, food2, food3, food4);
+
+const foods = getFood(food1, food2, food3, food4);
+
+console.log (foods);
+
+function sum(...numbers) {
+    let res = 0;
+    for (let number of numbers){
+        res+=number;
+    }
+    return res;
+}
+
+function getAvg(...numbers) {
+    let res = 0;
+    for (let number of numbers){
+        res+=number;
+    }
+    return res/ numbers.length;
+}
+
+const total = getAvg(75, 100, 85, 90, 50);
+console.log(total)
