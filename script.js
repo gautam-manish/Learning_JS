@@ -337,3 +337,39 @@ function getAvg(...numbers) {
 
 const total = getAvg(75, 100, 85, 90, 50);
 console.log(total)
+
+// Call Back Function 
+
+hello(wait);
+// goodbye();
+
+function hello (callback){
+    console.log("Hello");
+    callback();
+}
+function wait (){
+    console.log("Wait");
+}
+
+function leave (){
+    console.log("Leave");
+}
+
+function goodbye (){
+    console.log("Goodbye");
+}
+
+addition(discon, 4, 2)
+addition(displayPage, 4, 2)
+
+function addition (callback, x, y){
+    let results = x+y;
+    callback(results);
+}
+function discon (results){
+    console.log(results);
+}
+
+function displayPage (results){
+    document.getElementById("myh1").textContent = results;
+}
