@@ -373,3 +373,36 @@ function discon (results){
 function displayPage (results){
     document.getElementById("myh1").textContent = results;
 }
+
+// for each
+console.log("For Each Method");
+
+let num = [1,2,3,4,5];
+
+num.forEach(display);
+num.forEach(display);
+
+function double (element, index, array){
+    array[index] = element * 2;
+}
+function triple (element, index, array){
+    array[index] = element * 3;
+}
+
+function square (element, index, array){
+    array[index] = Math.pow(element,2);
+}
+function display (element){
+    console.log(element);
+}
+
+let fru = ["apple", "orange", "banana", "coconut"];
+
+fru.forEach(display);
+
+function uppercase(element,index,array){
+    array[index] = element.toUpperCase();
+}
+function display (element){
+    console.log(element);
+}
