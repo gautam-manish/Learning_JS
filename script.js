@@ -291,21 +291,21 @@ let username = "Manish Gautam";
 let letters = [...username].join("+")
 console.log(letters)
 
-let fruit = ["banana","guava", "mama"]
-let vegetables = ["cabbage", "tomato","spanich"]
+let fruit = ["banana", "guava", "mama"]
+let vegetables = ["cabbage", "tomato", "spanich"]
 
-let food = [...fruit, ...vegetables, "eggs","milk"]
+let food = [...fruit, ...vegetables, "eggs", "milk"]
 
 console.log(food)
 
 console.log("Rest parameters");
 
-function openFridge(...foods){
+function openFridge(...foods) {
     console.log(...foods);
 }
 
 function getFood(...foods) {
-    return foods;    
+    return foods;
 }
 
 const food1 = "pizza"
@@ -317,22 +317,22 @@ const food4 = "hotdog"
 
 const foods = getFood(food1, food2, food3, food4);
 
-console.log (foods);
+console.log(foods);
 
 function sum(...numbers) {
     let res = 0;
-    for (let number of numbers){
-        res+=number;
+    for (let number of numbers) {
+        res += number;
     }
     return res;
 }
 
 function getAvg(...numbers) {
     let res = 0;
-    for (let number of numbers){
-        res+=number;
+    for (let number of numbers) {
+        res += number;
     }
-    return res/ numbers.length;
+    return res / numbers.length;
 }
 
 const total = getAvg(75, 100, 85, 90, 50);
@@ -343,56 +343,56 @@ console.log(total)
 hello(wait);
 // goodbye();
 
-function hello (callback){
+function hello(callback) {
     console.log("Hello");
     callback();
 }
-function wait (){
+function wait() {
     console.log("Wait");
 }
 
-function leave (){
+function leave() {
     console.log("Leave");
 }
 
-function goodbye (){
+function goodbye() {
     console.log("Goodbye");
 }
 
 addition(discon, 4, 2)
-addition(displayPage, 4, 2)
+addition(displayPage, 10, 7)
 
-function addition (callback, x, y){
-    let results = x+y;
+function addition(callback, x, y) {
+    let results = x + y;
     callback(results);
 }
-function discon (results){
+function discon(results) {
     console.log(results);
 }
 
-function displayPage (results){
+function displayPage(results) {
     document.getElementById("myh1").textContent = results;
 }
 
 // for each
 console.log("For Each Method");
 
-let num = [1,2,3,4,5];
+let num = [1, 2, 3, 4, 5];
 
 num.forEach(display);
 num.forEach(display);
 
-function double (element, index, array){
+function double(element, index, array) {
     array[index] = element * 2;
 }
-function triple (element, index, array){
+function triple(element, index, array) {
     array[index] = element * 3;
 }
 
-function square (element, index, array){
-    array[index] = Math.pow(element,2);
+function square(element, index, array) {
+    array[index] = Math.pow(element, 2);
 }
-function display (element){
+function display(element) {
     console.log(element);
 }
 
@@ -400,9 +400,50 @@ let fru = ["apple", "orange", "banana", "coconut"];
 
 fru.forEach(display);
 
-function uppercase(element,index,array){
+function uppercase(element, index, array) {
     array[index] = element.toUpperCase();
 }
-function display (element){
+function display(element) {
     console.log(element);
+}
+
+
+// Map ()
+
+const numb = [1, 2, 3, 4, 5];
+
+const squares = numb.map(square);
+const cubes = numb.map(cube)
+console.log(squares);
+console.log(cubes);
+function square(element) {
+    return Math.pow(element, 2)
+}
+function cube(element) {
+    return Math.pow(element, 3)
+}
+
+const students = ["Manish", "Gautam", "Denver", "Nairobi"];
+const studentsUpper = students.map(upperCases)
+const studentsLower = students.map(lowerCases)
+
+console.log(studentsUpper);
+console.log(studentsLower);
+
+function upperCases (element){
+    return element.toUpperCase();
+}
+function lowerCases (element){
+    return element.toLowerCase();
+}
+
+const dates = ["2003-12-03" , "2004-12-02"];
+const formattedDates = dates.map(formatDates);
+
+console.log(dates)
+console.log(formattedDates)
+
+function formatDates (element){
+    const parts = element.split("-");
+    return `${parts[1]}/${parts[2]}/${parts[0]}`;
 }
