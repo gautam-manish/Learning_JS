@@ -447,3 +447,51 @@ function formatDates (element){
     const parts = element.split("-");
     return `${parts[1]}/${parts[2]}/${parts[0]}`;
 }
+
+
+// filter method
+
+let numbe = [1,2,3,4,5,6,7];
+let evenNum = numbe.filter(isEven);
+let oddNum = numbe.filter(isOdd);
+
+console.log(evenNum);
+console.log(oddNum);
+
+function isEven (element){
+    return element % 2 === 0;
+}
+
+function isOdd (element){
+    return element % 2 !== 0;
+}
+
+
+const year = [16, 17, 18, 19, 20, 60];
+let adults = year.filter(isAdult);
+let child = year.filter(isChild);
+
+console.log(adults);
+console.log(child);
+
+function isAdult (element){
+    return element >= 18;
+}
+
+function isChild (element){
+    return element < 18;
+}
+
+const words = ["apple","orange","cauliflower","brocauli","banana", "kiwi","coconut"];
+const shortWords = words.filter(getShortWords);
+const longWords = words.filter(getLongWords);
+
+console.log(shortWords)
+console.log(longWords)
+
+function getShortWords (element){
+    return element.length <= 6;
+}
+function getLongWords (element){
+    return element.length > 6;
+}
