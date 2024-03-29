@@ -495,3 +495,32 @@ function getShortWords (element){
 function getLongWords (element){
     return element.length > 6;
 }
+
+// reduce method
+console.log("reduce method")
+
+const prices = [5, 30, 10, 25, 15, 20];
+
+const totals = prices.reduce(sums);
+
+console.log(`$${totals.toFixed(2)}`);
+
+function sums (accumulaor, element){
+    return accumulaor + element;
+}
+
+const grades = [75, 50, 90, 80, 65, 95];
+
+const max = grades.reduce(getMax);
+const min = grades.reduce(getMin);
+
+console.log(max);
+console.log(min);
+
+function getMax(accumulaor, element){
+    return Math.max(accumulaor, element);
+}
+
+function getMin(accumulaor, element){
+    return Math.min(accumulaor, element);
+}
