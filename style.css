@@ -1,0 +1,31 @@
+.container {
+    background-color: chocolate;
+    width: 25%;
+    font-size: large;
+    padding: 5px 25px;
+}
+
+#myh1{
+    background-color: black;
+    color: whitesmoke;
+    width: fit-content;
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+
+#sub {
+    border: 1px solid aquamarine;
+    border-radius: 10px;
+    padding: 7px 20px;
+    background-color: aquamarine;
+    color: brown;
+    font-size: larger;
+    cursor: pointer;
+}
+
+#sub:hover {
+    border: 1px solid brown;
+    color: aquamarine;
+    background-color: brown;
+}
+
