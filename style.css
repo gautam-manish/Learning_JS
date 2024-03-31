@@ -29,3 +29,16 @@
     background-color: brown;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#daynum{
+    padding: 5px;
+    color: black;
+    text-align: center;
+    border: none;
+    font-size: 15px;
+}
