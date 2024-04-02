@@ -524,3 +524,37 @@ function getMax(accumulaor, element){
 function getMin(accumulaor, element){
     return Math.min(accumulaor, element);
 }
+
+// function expression
+
+const namaste = function(){
+    console.log("Namaste");
+}
+
+namaste();
+
+setTimeout(function(){
+    console.log("Manish")
+}, 3000);
+
+const abc = [1,2,3,4,5,6];
+const sq = abc.map(function (element){
+    return Math.pow(element,2);
+})
+const evens = abc.filter(function(element){
+    return element % 2 == 0;
+})
+const odds = abc.filter(function(element){
+    return element % 2 == 1;
+})
+console.log(evens)
+console.log(odds)
+
+console.log(sq)
+
+// Adding numbers of array
+const adds = abc.reduce(function(accumulaor, element){
+    return accumulaor + element;
+});
+
+console.log(adds)
