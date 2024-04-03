@@ -533,9 +533,9 @@ const namaste = function(){
 
 namaste();
 
-setTimeout(function(){
-    console.log("Manish")
-}, 3000);
+// setTimeout(function(){
+//     console.log("Manish")
+// }, 3000);
 
 const abc = [1,2,3,4,5,6];
 const sq = abc.map(function (element){
@@ -558,3 +558,28 @@ const adds = abc.reduce(function(accumulaor, element){
 });
 
 console.log(adds)
+
+// arrow functions
+
+const arrow = function (){
+    console.log(`arrow`);
+}
+arrow();
+
+const arrowfun = () => console.log("Manish")
+arrowfun();
+
+const arrowname = (names, ageses) => {console.log (`Hello ${names}`)
+console.log(`You are ${ageses} years old`)};
+
+arrowname ("Manish", 20);
+
+setTimeout(() => console.log("Hello"), 3000);
+
+const arr = [1,2,3,4,5,6];
+
+const squ = arr.map((element) => Math.pow(element, 2));
+const cu = arr.map((element) => Math.pow(element, 2));
+
+console.log(squ)
+console.log(cu)
