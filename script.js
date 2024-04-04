@@ -574,7 +574,7 @@ console.log(`You are ${ageses} years old`)};
 
 arrowname ("Manish", 20);
 
-setTimeout(() => console.log("Hello"), 3000);
+// setTimeout(() => console.log("Hello"), 3000);
 
 const arr = [1,2,3,4,5,6];
 
@@ -583,3 +583,43 @@ const cu = arr.map((element) => Math.pow(element, 2));
 
 console.log(squ)
 console.log(cu)
+
+// Object in JS
+
+const person1 = {
+    firstName: "Manish",
+    lastName: "Gautam",
+    age: 23,
+    isEmployeed: true,
+    sayHello: function(){
+        console.log(`Hi I am ${this.firstName}`)
+    },
+    eat: function (){
+        console.log("I am eating a pizza")
+    }
+}
+
+const person2 = {
+    firstName: "Patrick",
+    lastName: "Star",
+    age: 42,
+    isEmployeed: false,
+    sayHello: ()=> console.log("Hi this is Patrick"),
+    eat: () => console.log ("I am eating Momo")
+}
+
+console.log(person1.firstName)
+console.log(person1.lastName)
+console.log(person1.age)
+console.log(person1.isEmployeed)
+
+console.log(person2.firstName)
+console.log(person2.lastName)
+console.log(person2.age)
+console.log(person2.isEmployeed)
+
+person1.sayHello()
+person1.eat()
+
+person2.sayHello()
+person2.eat()
