@@ -623,3 +623,34 @@ person1.eat()
 
 person2.sayHello()
 person2.eat()
+
+// this
+
+const per1 = {
+    name: "Manish",
+    favFood: "Momo",
+    sayHello: function(){
+        console.log(`Hi I am ${this.name}`)
+    },
+    eat: ()=>{
+        console.log(`${per1.name} is eating ${per1.favFood}`)
+    }
+}
+
+const per2 = {
+    name: "Gautam",
+    favFood: "Pizza",
+    sayHello: function(){
+        console.log(`Hi I am ${this.name}`)
+    },
+    eat: ()=>{
+        console.log(`${per2.name} is eating ${per2.favFood}`)
+    }
+}
+
+per1.sayHello();
+per1.eat();
+per2.sayHello();
+per2.eat();
+
+console.log(this)
