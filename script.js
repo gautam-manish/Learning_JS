@@ -689,3 +689,35 @@ console.log(car3.color);
 car1.drive();
 car2.drive();
 car3.drive();
+
+
+// Clases
+console.log("Classes");
+
+class Product{
+    constructor(name, price){
+        this.name = name;
+        this.price = price;
+
+    }
+
+    displayPloduct(){
+        console.log(`Product: ${this.name}`);
+        console.log(`Price: $${this.price}`);
+    }
+
+    calculateTotal(salesTax){
+        return this.price + (this.price * salesTax)
+    }
+}
+
+const salesTax = 0.05;
+
+const product1 = new Product ("Shirt", 19.99);
+const product2 = new Product ("Pants", 22.99);
+const product3 = new Product ("Underware", 100.00);
+
+product3.displayPloduct();
+
+const totaled = product3.calculateTotal(salesTax);
+console.log(`Total price (with tax): $${totaled.toFixed(2)}`);
