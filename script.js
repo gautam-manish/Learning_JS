@@ -721,3 +721,57 @@ product3.displayPloduct();
 
 const totaled = product3.calculateTotal(salesTax);
 console.log(`Total price (with tax): $${totaled.toFixed(2)}`);
+
+// Static keyword
+
+class MathUtil{
+    static PI = 3.14159;
+
+    static getDiameter(radius){
+        return radius * 2;
+    }
+    static getcircumference(radius){
+        return 2 * this.PI * radius;
+    }
+    static getArea(radius){
+        return this.PI * radius *radius;
+    }
+}
+
+console.log(MathUtil.PI)
+console.log(MathUtil.getDiameter(10))
+console.log(MathUtil.getcircumference(10))
+console.log(MathUtil.getArea(10))
+
+class User{
+
+    static userCount = 0;
+
+    constructor(username){
+        this.username = username;
+        User.userCount++;
+    }
+
+    static getUserCount(){
+        console.log(`There are ${User.userCount} users online`)
+    }
+
+    sayHello(){
+        console.log(`Hello, My username is ${this.username}`)
+    }
+}
+
+const user1 = new User("Manish");
+const user2 = new User("Gautam");
+const user3 = new User("Sharma");
+
+console.log(user1.username);
+console.log(user2.username);
+console.log(user3.username);
+
+user1.sayHello();
+user2.sayHello();
+user3.sayHello();
+User.getUserCount();
+
+console.log(User.userCount)
