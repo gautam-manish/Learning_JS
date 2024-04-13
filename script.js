@@ -775,3 +775,44 @@ user3.sayHello();
 User.getUserCount();
 
 console.log(User.userCount)
+
+// Inheritance
+
+class Animal{
+    alive = true;
+
+    eat(){
+        console.log(`This ${this.name} is eating`);
+    }
+    
+    sleep(){
+        console.log(`This ${this.name} is sleeping`);
+    }
+}
+
+class Rabbit extends Animal{
+     name = "Rabbit";
+}
+
+class Fish extends Animal{
+     name = "Fish";
+}
+
+class Dog extends Animal {
+     name = "Dog";
+}
+
+const rabbit = new Rabbit();
+const fish = new Fish();
+const dog = new Dog();
+
+
+console.log(rabbit.alive);
+rabbit.eat();
+rabbit.sleep();
+console.log(fish.alive);
+fish.eat();
+fish.sleep();
+console.log(dog.alive);
+dog.eat();
+dog.sleep();
