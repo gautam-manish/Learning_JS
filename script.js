@@ -816,3 +816,66 @@ fish.sleep();
 console.log(dog.alive);
 dog.eat();
 dog.sleep();
+
+// Super keyword
+
+class Animals{
+    constructor(name , age){
+        this.name = name;
+        this.age = age;
+    }
+
+    move(speed){
+        console.log(`The ${this.name} moves at a speed of ${speed} kmph`)
+    }
+}
+class Rabbits extends Animals{
+    constructor(name, age, runSpeed){
+        super(name, age);
+        this.runSpeed = runSpeed;
+    }
+
+    run(){
+        console.log(`This ${this.name} can run`)
+        super.move(this.runSpeed);
+    }
+}
+class Fishs extends Animals{
+    constructor(name, age, swimSpeed){
+        super(name, age);
+        this.swimSpeed = swimSpeed;
+    }
+
+    swim(){
+        console.log(`This ${this.name} can swim`)
+        super.move(this.swimSpeed)
+    }
+}
+class Hwak extends Animals{
+    constructor(name, age, flySpeed){
+        super(name, age);
+        this.flySpeed = flySpeed;
+    }
+
+    fly(){
+        console.log(`This ${this.name} can fly`)
+        super.move(this.flySpeed);
+    }
+}
+
+const rabbits = new Rabbits("Rabbit", 1, 25);
+const fishs = new Fishs("Fish", 2, 30);
+const hwak = new Hwak("Hwak", 3, 50);
+
+console.log(rabbits.name);
+console.log(rabbits.age);
+console.log(rabbits.runSpeed);
+rabbits.run();
+console.log(fishs.name);
+console.log(fishs.age);
+console.log(fishs.swimSpeed);
+fishs.swim();
+console.log(hwak.name);
+console.log(hwak.age);
+console.log(hwak.flySpeed);
+hwak.fly();
