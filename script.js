@@ -430,20 +430,20 @@ const studentsLower = students.map(lowerCases)
 console.log(studentsUpper);
 console.log(studentsLower);
 
-function upperCases (element){
+function upperCases(element) {
     return element.toUpperCase();
 }
-function lowerCases (element){
+function lowerCases(element) {
     return element.toLowerCase();
 }
 
-const dates = ["2003-12-03" , "2004-12-02"];
+const dates = ["2003-12-03", "2004-12-02"];
 const formattedDates = dates.map(formatDates);
 
 console.log(dates)
 console.log(formattedDates)
 
-function formatDates (element){
+function formatDates(element) {
     const parts = element.split("-");
     return `${parts[1]}/${parts[2]}/${parts[0]}`;
 }
@@ -451,18 +451,18 @@ function formatDates (element){
 
 // filter method
 
-let numbe = [1,2,3,4,5,6,7];
+let numbe = [1, 2, 3, 4, 5, 6, 7];
 let evenNum = numbe.filter(isEven);
 let oddNum = numbe.filter(isOdd);
 
 console.log(evenNum);
 console.log(oddNum);
 
-function isEven (element){
+function isEven(element) {
     return element % 2 === 0;
 }
 
-function isOdd (element){
+function isOdd(element) {
     return element % 2 !== 0;
 }
 
@@ -474,25 +474,25 @@ let child = year.filter(isChild);
 console.log(adults);
 console.log(child);
 
-function isAdult (element){
+function isAdult(element) {
     return element >= 18;
 }
 
-function isChild (element){
+function isChild(element) {
     return element < 18;
 }
 
-const words = ["apple","orange","cauliflower","brocauli","banana", "kiwi","coconut"];
+const words = ["apple", "orange", "cauliflower", "brocauli", "banana", "kiwi", "coconut"];
 const shortWords = words.filter(getShortWords);
 const longWords = words.filter(getLongWords);
 
 console.log(shortWords)
 console.log(longWords)
 
-function getShortWords (element){
+function getShortWords(element) {
     return element.length <= 6;
 }
-function getLongWords (element){
+function getLongWords(element) {
     return element.length > 6;
 }
 
@@ -505,7 +505,7 @@ const totals = prices.reduce(sums);
 
 console.log(`$${totals.toFixed(2)}`);
 
-function sums (accumulaor, element){
+function sums(accumulaor, element) {
     return accumulaor + element;
 }
 
@@ -517,17 +517,17 @@ const min = grades.reduce(getMin);
 console.log(max);
 console.log(min);
 
-function getMax(accumulaor, element){
+function getMax(accumulaor, element) {
     return Math.max(accumulaor, element);
 }
 
-function getMin(accumulaor, element){
+function getMin(accumulaor, element) {
     return Math.min(accumulaor, element);
 }
 
 // function expression
 
-const namaste = function(){
+const namaste = function () {
     console.log("Namaste");
 }
 
@@ -537,14 +537,14 @@ namaste();
 //     console.log("Manish")
 // }, 3000);
 
-const abc = [1,2,3,4,5,6];
-const sq = abc.map(function (element){
-    return Math.pow(element,2);
+const abc = [1, 2, 3, 4, 5, 6];
+const sq = abc.map(function (element) {
+    return Math.pow(element, 2);
 })
-const evens = abc.filter(function(element){
+const evens = abc.filter(function (element) {
     return element % 2 == 0;
 })
-const odds = abc.filter(function(element){
+const odds = abc.filter(function (element) {
     return element % 2 == 1;
 })
 console.log(evens)
@@ -553,7 +553,7 @@ console.log(odds)
 console.log(sq)
 
 // Adding numbers of array
-const adds = abc.reduce(function(accumulaor, element){
+const adds = abc.reduce(function (accumulaor, element) {
     return accumulaor + element;
 });
 
@@ -561,7 +561,7 @@ console.log(adds)
 
 // arrow functions
 
-const arrow = function (){
+const arrow = function () {
     console.log(`arrow`);
 }
 arrow();
@@ -569,14 +569,16 @@ arrow();
 const arrowfun = () => console.log("Manish")
 arrowfun();
 
-const arrowname = (names, ageses) => {console.log (`Hello ${names}`)
-console.log(`You are ${ageses} years old`)};
+const arrowname = (names, ageses) => {
+    console.log(`Hello ${names}`)
+    console.log(`You are ${ageses} years old`)
+};
 
-arrowname ("Manish", 20);
+arrowname("Manish", 20);
 
 // setTimeout(() => console.log("Hello"), 3000);
 
-const arr = [1,2,3,4,5,6];
+const arr = [1, 2, 3, 4, 5, 6];
 
 const squ = arr.map((element) => Math.pow(element, 2));
 const cu = arr.map((element) => Math.pow(element, 2));
@@ -591,10 +593,10 @@ const person1 = {
     lastName: "Gautam",
     age: 23,
     isEmployeed: true,
-    sayHello: function(){
+    sayHello: function () {
         console.log(`Hi I am ${this.firstName}`)
     },
-    eat: function (){
+    eat: function () {
         console.log("I am eating a pizza")
     }
 }
@@ -604,8 +606,8 @@ const person2 = {
     lastName: "Star",
     age: 42,
     isEmployeed: false,
-    sayHello: ()=> console.log("Hi this is Patrick"),
-    eat: () => console.log ("I am eating Momo")
+    sayHello: () => console.log("Hi this is Patrick"),
+    eat: () => console.log("I am eating Momo")
 }
 
 console.log(person1.firstName)
@@ -629,10 +631,10 @@ person2.eat()
 const per1 = {
     name: "Manish",
     favFood: "Momo",
-    sayHello: function(){
+    sayHello: function () {
         console.log(`Hi I am ${this.name}`)
     },
-    eat: ()=>{
+    eat: () => {
         console.log(`${per1.name} is eating ${per1.favFood}`)
     }
 }
@@ -640,10 +642,10 @@ const per1 = {
 const per2 = {
     name: "Gautam",
     favFood: "Pizza",
-    sayHello: function(){
+    sayHello: function () {
         console.log(`Hi I am ${this.name}`)
     },
-    eat: ()=>{
+    eat: () => {
         console.log(`${per2.name} is eating ${per2.favFood}`)
     }
 }
@@ -657,19 +659,19 @@ console.log(this)
 
 // constructor
 
-function Car (make, model, year, color){
+function Car(make, model, year, color) {
     this.make = make,
-    this.model = model,
-    this.year = year,
-    this.color = color,
-    this.drive = function (){
-        console.log(`You drive the ${this.make} ${this.model}`)
-    }
+        this.model = model,
+        this.year = year,
+        this.color = color,
+        this.drive = function () {
+            console.log(`You drive the ${this.make} ${this.model}`)
+        }
 }
 
-const car1 = new Car ("Ford","Mustang", 2024, "Red");
-const car2 = new Car ("Tata","Nexon",2022,"Blue");
-const car3 = new Car ("Lamborgini", "Urus", 2023,"Black")
+const car1 = new Car("Ford", "Mustang", 2024, "Red");
+const car2 = new Car("Tata", "Nexon", 2022, "Blue");
+const car3 = new Car("Lamborgini", "Urus", 2023, "Black")
 
 console.log(car1.make);
 console.log(car1.model);
@@ -694,28 +696,28 @@ car3.drive();
 // Clases
 console.log("Classes");
 
-class Product{
-    constructor(name, price){
+class Product {
+    constructor(name, price) {
         this.name = name;
         this.price = price;
 
     }
 
-    displayPloduct(){
+    displayPloduct() {
         console.log(`Product: ${this.name}`);
         console.log(`Price: $${this.price}`);
     }
 
-    calculateTotal(salesTax){
+    calculateTotal(salesTax) {
         return this.price + (this.price * salesTax)
     }
 }
 
 const salesTax = 0.05;
 
-const product1 = new Product ("Shirt", 19.99);
-const product2 = new Product ("Pants", 22.99);
-const product3 = new Product ("Underware", 100.00);
+const product1 = new Product("Shirt", 19.99);
+const product2 = new Product("Pants", 22.99);
+const product3 = new Product("Underware", 100.00);
 
 product3.displayPloduct();
 
@@ -724,17 +726,17 @@ console.log(`Total price (with tax): $${totaled.toFixed(2)}`);
 
 // Static keyword
 
-class MathUtil{
+class MathUtil {
     static PI = 3.14159;
 
-    static getDiameter(radius){
+    static getDiameter(radius) {
         return radius * 2;
     }
-    static getcircumference(radius){
+    static getcircumference(radius) {
         return 2 * this.PI * radius;
     }
-    static getArea(radius){
-        return this.PI * radius *radius;
+    static getArea(radius) {
+        return this.PI * radius * radius;
     }
 }
 
@@ -743,20 +745,20 @@ console.log(MathUtil.getDiameter(10))
 console.log(MathUtil.getcircumference(10))
 console.log(MathUtil.getArea(10))
 
-class User{
+class User {
 
     static userCount = 0;
 
-    constructor(username){
+    constructor(username) {
         this.username = username;
         User.userCount++;
     }
 
-    static getUserCount(){
+    static getUserCount() {
         console.log(`There are ${User.userCount} users online`)
     }
 
-    sayHello(){
+    sayHello() {
         console.log(`Hello, My username is ${this.username}`)
     }
 }
@@ -778,28 +780,28 @@ console.log(User.userCount)
 
 // Inheritance
 
-class Animal{
+class Animal {
     alive = true;
 
-    eat(){
+    eat() {
         console.log(`This ${this.name} is eating`);
     }
-    
-    sleep(){
+
+    sleep() {
         console.log(`This ${this.name} is sleeping`);
     }
 }
 
-class Rabbit extends Animal{
-     name = "Rabbit";
+class Rabbit extends Animal {
+    name = "Rabbit";
 }
 
-class Fish extends Animal{
-     name = "Fish";
+class Fish extends Animal {
+    name = "Fish";
 }
 
 class Dog extends Animal {
-     name = "Dog";
+    name = "Dog";
 }
 
 const rabbit = new Rabbit();
@@ -819,45 +821,45 @@ dog.sleep();
 
 // Super keyword
 
-class Animals{
-    constructor(name , age){
+class Animals {
+    constructor(name, age) {
         this.name = name;
         this.age = age;
     }
 
-    move(speed){
+    move(speed) {
         console.log(`The ${this.name} moves at a speed of ${speed} kmph`)
     }
 }
-class Rabbits extends Animals{
-    constructor(name, age, runSpeed){
+class Rabbits extends Animals {
+    constructor(name, age, runSpeed) {
         super(name, age);
         this.runSpeed = runSpeed;
     }
 
-    run(){
+    run() {
         console.log(`This ${this.name} can run`)
         super.move(this.runSpeed);
     }
 }
-class Fishs extends Animals{
-    constructor(name, age, swimSpeed){
+class Fishs extends Animals {
+    constructor(name, age, swimSpeed) {
         super(name, age);
         this.swimSpeed = swimSpeed;
     }
 
-    swim(){
+    swim() {
         console.log(`This ${this.name} can swim`)
         super.move(this.swimSpeed)
     }
 }
-class Hwak extends Animals{
-    constructor(name, age, flySpeed){
+class Hwak extends Animals {
+    constructor(name, age, flySpeed) {
         super(name, age);
         this.flySpeed = flySpeed;
     }
 
-    fly(){
+    fly() {
         console.log(`This ${this.name} can fly`)
         super.move(this.flySpeed);
     }
@@ -883,103 +885,153 @@ hwak.fly();
 // Getter and Setter
 
 class Rectangle {
-    constructor (width, height){
+    constructor(width, height) {
         this.width = width;
         this.height = height;
     }
 
-    set width(newWidth){
-        if(newWidth > 0){
+    set width(newWidth) {
+        if (newWidth > 0) {
             this._width = newWidth
         }
-        else{
+        else {
             console.error("Width must be a positive number")
         }
     }
 
-    set height(newHeight){
-        if(newHeight > 0){
+    set height(newHeight) {
+        if (newHeight > 0) {
             this._heigth = newHeight;
         }
-        else{
+        else {
             console.error("Height must be a positive number")
         }
     }
 
-    get width(){
+    get width() {
         return this._width;
     }
-    
-    get height(){
+
+    get height() {
         return this._heigth;
     }
 
-    get area (){
+    get area() {
         return this._heigth * this._width
     }
 }
 
-const rectangle = new Rectangle (3, 4);
+const rectangle = new Rectangle(3, 4);
 
 console.log(rectangle.width);
 console.log(rectangle.height);
 console.log(`Area is ${rectangle.area}`);
 
-class Person{
-    
-    constructor (firstName, lastName, age){
+class Person {
+
+    constructor(firstName, lastName, age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
     }
 
-    set firstName (newFirstName){
-        if(typeof newFirstName === "string" && newFirstName.length > 0){
+    set firstName(newFirstName) {
+        if (typeof newFirstName === "string" && newFirstName.length > 0) {
             this._firstName = newFirstName;
         }
-        else{
+        else {
             console.error("First name must be a non-empty string");
         }
     }
 
-    set lastName (newLastName){
-        if(typeof newLastName === "string" && newLastName.length > 0){
+    set lastName(newLastName) {
+        if (typeof newLastName === "string" && newLastName.length > 0) {
             this._lastName = newLastName;
         }
-        else{
+        else {
             console.error("Last name must be a non-empty string");
         }
     }
 
-    set age(newAge){
-        if(typeof newAge === "number" && newAge >=0){
+    set age(newAge) {
+        if (typeof newAge === "number" && newAge >= 0) {
             this._age = newAge;
         }
-        else{
+        else {
             console.error("Age must be a non-negative number")
         }
     }
 
-    get firstName(){
+    get firstName() {
         return this._firstName;
     }
-    
-    get lastName(){
+
+    get lastName() {
         return this._lastName;
     }
 
-    get fullName(){
+    get fullName() {
         return this._firstName + " " + this._lastName;
     }
-    
-    get age(){
+
+    get age() {
         return this._age;
     }
 }
 
-const person = new Person ("Manish", "Gautam", 20);
+const person = new Person("Manish", "Gautam", 20);
 
 console.log(person.firstName);
 console.log(person.lastName);
 console.log(person.fullName);
 console.log(person.age);
+
+// Destructuring
+
+let a = 1;
+let b = 2;
+
+[a, b] = [b, a];
+
+console.log(a);
+console.log(b);
+
+const color = ["red", "green", "blue", "black", "white"];
+
+const [firstColor, secondColor, thirdColor, ...extraColors] = color;
+
+[color[0], color[4]] = [color[4], color[0]];
+
+console.log(color);
+console.log(firstColor);
+console.log(secondColor);
+console.log(thirdColor);
+console.log(extraColors);
+
+function displayPeople({ firstName, lastName, age, job="Unemployed"}) {
+    console.log(`Name: ${firstName} ${lastName}`);
+    console.log(`Age: ${age}`);
+    console.log(`Job: ${job}`);
+}
+
+const people1 = {
+    firstName: "Manish",
+    lastName: "Gautam",
+    age: 20,
+    job: "Software engineer"
+}
+
+const people2 = {
+    firstName: "Patrick",
+    lastName: "Star",
+    age: 34
+}
+
+const { firstName, lastName, age, job } = people1;
+
+console.log(firstName)
+console.log(lastName)
+console.log(age)
+console.log(job)
+
+displayPeople(people2);
