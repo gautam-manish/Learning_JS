@@ -1035,3 +1035,54 @@ console.log(age)
 console.log(job)
 
 displayPeople(people2);
+
+
+// Nested Object
+
+const peop = {
+    fullName: "Manish Gautam",
+    age: 20,
+    isStudent: true,
+    hobbies: ["Karate", "Table Tennis", "Cooking"],
+    address: {
+        street: "Changathali 07",
+        city: "Lalitpur",
+        country: "Nepal"
+    }
+}
+
+console.log(peop.fullName);
+console.log(peop.age);
+console.log(peop.isStudent);
+console.log(peop.hobbies[1]);
+console.log(peop.address.city);
+
+for (const property in peop.address){
+    console.log(peop.address[property])
+}
+
+class People {
+
+    constructor (name, age, ...address){
+        this.name = name;
+        this.age = age;
+        this.address = new Address(...address);
+    }
+}
+
+class Address {
+
+    constructor (street, city, country){
+        this.street = street;
+        this.city = city;
+        this.country = country;
+    }
+}
+
+const peop1 = new People("Manish", 20, "Changathali 07", "Lalitpur", "Nepal");
+const peop2 = new People("Patrick", 30, "Balkot", "Bhaktapur", "Nepal");
+const peop3 = new People("Gautam", 21, "Gauradaha 03", "Jhapa", "Nepal");
+
+console.log(peop1.name);
+console.log(peop1.age);
+console.log(peop3.address.street);
