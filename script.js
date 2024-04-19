@@ -1086,3 +1086,48 @@ const peop3 = new People("Gautam", 21, "Gauradaha 03", "Jhapa", "Nepal");
 console.log(peop1.name);
 console.log(peop1.age);
 console.log(peop3.address.street);
+
+
+// Array Of Object 
+
+const fruitss = [{name: "apple", color: "red", calories: 95},{name: "orange", color: "orange", calories: 45},{name: "banana", color: "yellow", calories: 105},{name: "coconut", color: "white", calories: 159},{ name: "pineapple", color: "yellow", calories: 37 }]
+
+console.log(fruitss[0].color)
+fruitss.push({name:"grapes",color: "green",  calories: 54})
+
+fruitss.pop()
+// fruitss.splice(1, 2)
+
+console.log(fruitss)
+
+fruitss.forEach(fruitss => console.log(fruitss.color))
+
+// ====== map() ======
+
+const fruitNames = fruitss.map(fruitss => fruitss.name);
+const fruitColor = fruitss.map(fruitss => fruitss.color);
+const fruitCalories = fruitss.map(fruitss => fruitss.calories);
+console.log(fruitNames)
+console.log(fruitColor)
+console.log(fruitCalories)
+
+// ====== filter() ======
+
+const yellowFruits = fruitss.filter(fruitss => fruitss.color === "yellow")
+const lowCalFruits = fruitss.filter(fruitss => fruitss.calories < 100);
+const highCalFruits = fruitss.filter(fruitss => fruitss.calories >= 100);
+
+console.log(yellowFruits);
+console.log(lowCalFruits);
+console.log(highCalFruits);
+
+// ====== reduce() ======
+
+const maxFruit = fruitss.reduce((max, fruit) => fruit.calories > max.calories ? fruit : max )
+
+const minFruit = fruitss.reduce((min, fruit) => fruit.calories < min.calories ? fruit : min )
+
+console.log(maxFruit)
+console.log(maxFruit.calories)
+console.log(minFruit)
+console.log(minFruit.calories)
