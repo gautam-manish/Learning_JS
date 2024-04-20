@@ -1131,3 +1131,23 @@ console.log(maxFruit)
 console.log(maxFruit.calories)
 console.log(minFruit)
 console.log(minFruit.calories)
+
+
+// Sorting
+
+let frui = ["aaple", "orange", "banana", "coconut", "pineapple"];
+
+let numbs = [1, 10, 2, 8, 4, 5, 6]
+
+frui.sort();
+numbs.sort((a, b) => b - a);
+
+console.log(frui);
+console.log(numbs);
+
+const p = [{name: "Manish", age: 20, gpa:3.0}, {name: "Patrick", age: 18, gpa:1.8}, {name: "Gautam", age: 22, gpa:2.9}, {name: "Fiend", age: 22, gpa: 1.8}]
+
+// p.sort( (a, b) => a.age - b.age);
+p.sort( (a, b) => a.name.localeCompare(b.name));
+
+console.log(p)
