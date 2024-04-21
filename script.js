@@ -1151,3 +1151,21 @@ const p = [{name: "Manish", age: 20, gpa:3.0}, {name: "Patrick", age: 18, gpa:1.
 p.sort( (a, b) => a.name.localeCompare(b.name));
 
 console.log(p)
+
+// Suffle an array
+
+const cards = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
+
+// cards.sort( () => Math.random() - 0.5);
+
+shuffle(cards)
+
+console.log(cards);
+
+function shuffle(array){
+    for(let i = array.length-1; i > 0; i--){
+        const randoms = Math.floor(Math.random() * (i + 1));
+
+        [array[i], array[randoms]] = [array[randoms], array[i]]
+    }
+}
