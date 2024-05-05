@@ -1169,3 +1169,31 @@ function shuffle(array){
         [array[i], array[randoms]] = [array[randoms], array[i]]
     }
 }
+
+
+// Dates Objects
+
+const date = new Date(2003, 11, 3, 8, 35, 44,910);
+
+console.log(date);
+
+const years = date.getFullYear();
+const month = date.getMonth();
+const days = date.getDate()
+const hour = date.getHours()
+const minutes = date.getMinutes()
+const second = date.getSeconds()
+
+console.log(years);
+console.log(month);
+console.log(days);
+console.log(hour);
+console.log(minutes);
+console.log(second);
+
+const date1 = new Date("2023-12-31");
+const date2 = new Date("2024-01-01");
+
+if(date2 > date1){
+    console.log("Happy New Year")
+}
