@@ -1008,7 +1008,7 @@ console.log(secondColor);
 console.log(thirdColor);
 console.log(extraColors);
 
-function displayPeople({ firstName, lastName, age, job="Unemployed"}) {
+function displayPeople({ firstName, lastName, age, job = "Unemployed" }) {
     console.log(`Name: ${firstName} ${lastName}`);
     console.log(`Age: ${age}`);
     console.log(`Job: ${job}`);
@@ -1057,13 +1057,13 @@ console.log(peop.isStudent);
 console.log(peop.hobbies[1]);
 console.log(peop.address.city);
 
-for (const property in peop.address){
+for (const property in peop.address) {
     console.log(peop.address[property])
 }
 
 class People {
 
-    constructor (name, age, ...address){
+    constructor(name, age, ...address) {
         this.name = name;
         this.age = age;
         this.address = new Address(...address);
@@ -1072,7 +1072,7 @@ class People {
 
 class Address {
 
-    constructor (street, city, country){
+    constructor(street, city, country) {
         this.street = street;
         this.city = city;
         this.country = country;
@@ -1090,10 +1090,10 @@ console.log(peop3.address.street);
 
 // Array Of Object 
 
-const fruitss = [{name: "apple", color: "red", calories: 95},{name: "orange", color: "orange", calories: 45},{name: "banana", color: "yellow", calories: 105},{name: "coconut", color: "white", calories: 159},{ name: "pineapple", color: "yellow", calories: 37 }]
+const fruitss = [{ name: "apple", color: "red", calories: 95 }, { name: "orange", color: "orange", calories: 45 }, { name: "banana", color: "yellow", calories: 105 }, { name: "coconut", color: "white", calories: 159 }, { name: "pineapple", color: "yellow", calories: 37 }]
 
 console.log(fruitss[0].color)
-fruitss.push({name:"grapes",color: "green",  calories: 54})
+fruitss.push({ name: "grapes", color: "green", calories: 54 })
 
 fruitss.pop()
 // fruitss.splice(1, 2)
@@ -1123,9 +1123,9 @@ console.log(highCalFruits);
 
 // ====== reduce() ======
 
-const maxFruit = fruitss.reduce((max, fruit) => fruit.calories > max.calories ? fruit : max )
+const maxFruit = fruitss.reduce((max, fruit) => fruit.calories > max.calories ? fruit : max)
 
-const minFruit = fruitss.reduce((min, fruit) => fruit.calories < min.calories ? fruit : min )
+const minFruit = fruitss.reduce((min, fruit) => fruit.calories < min.calories ? fruit : min)
 
 console.log(maxFruit)
 console.log(maxFruit.calories)
@@ -1145,10 +1145,10 @@ numbs.sort((a, b) => b - a);
 console.log(frui);
 console.log(numbs);
 
-const p = [{name: "Manish", age: 20, gpa:3.0}, {name: "Patrick", age: 18, gpa:1.8}, {name: "Gautam", age: 22, gpa:2.9}, {name: "Fiend", age: 22, gpa: 1.8}]
+const p = [{ name: "Manish", age: 20, gpa: 3.0 }, { name: "Patrick", age: 18, gpa: 1.8 }, { name: "Gautam", age: 22, gpa: 2.9 }, { name: "Fiend", age: 22, gpa: 1.8 }]
 
 // p.sort( (a, b) => a.age - b.age);
-p.sort( (a, b) => a.name.localeCompare(b.name));
+p.sort((a, b) => a.name.localeCompare(b.name));
 
 console.log(p)
 
@@ -1162,8 +1162,8 @@ shuffle(cards)
 
 console.log(cards);
 
-function shuffle(array){
-    for(let i = array.length-1; i > 0; i--){
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
         const randoms = Math.floor(Math.random() * (i + 1));
 
         [array[i], array[randoms]] = [array[randoms], array[i]]
@@ -1173,7 +1173,7 @@ function shuffle(array){
 
 // Dates Objects
 
-const date = new Date(2003, 11, 3, 8, 35, 44,910);
+const date = new Date(2003, 11, 3, 8, 35, 44, 910);
 
 console.log(date);
 
@@ -1194,6 +1194,79 @@ console.log(second);
 const date1 = new Date("2023-12-31");
 const date2 = new Date("2024-01-01");
 
-if(date2 > date1){
+if (date2 > date1) {
     console.log("Happy New Year")
 }
+
+
+// Closure
+
+function outer() {
+
+    let messages = "Hello";
+    function inner() {
+        console.log(messages)
+    }
+
+    inner();
+}
+
+message = "Goodbye";
+
+outer();
+
+function createCounter() {
+
+
+    let count = 0;
+
+    function increment() {
+
+        count++;
+        console.log(`Count increased to ${count}`)
+    }
+
+    function getCount() {
+        return count;
+    }
+
+    return { increment, getCount }
+}
+
+const counter = createCounter();
+
+counter.increment();
+counter.increment();
+counter.increment();
+counter.increment();
+counter.increment();
+
+console.log(`THe current count is ${counter.getCount()}`);
+
+function createGame() {
+
+    let score = 0;
+
+    function increaseScore(points) {
+        score += points;
+        console.log(`+${points}pts`)
+    }
+
+    function decreaseScore(points) {
+        score -= points;
+        console.log(`-${points}pts`)
+    }
+
+    function getScore() {
+        return score;
+    }
+
+    return {increaseScore, decreaseScore, getScore}
+}
+
+const game = createGame();
+
+game.increaseScore(5)
+game.decreaseScore(3)
+console.log(`The final score is ${game.getScore()}pts`)
+
