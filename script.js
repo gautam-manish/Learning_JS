@@ -1270,3 +1270,33 @@ game.increaseScore(5)
 game.decreaseScore(3)
 console.log(`The final score is ${game.getScore()}pts`)
 
+
+/* ----- setTimeout() ----- */
+
+/* function sayHellos(){
+    window.alert("Hello")
+}
+
+setTimeout (sayHellos, 3000) */
+
+/* setTimeout(function(){
+    window.alert("Hello")
+}, 3000); */
+
+/* const timeoutID = setTimeout(() => {
+    window.alert("Hello")
+}, 3000);
+
+clearTimeout (timeoutID); */
+
+let timeOutId;
+
+function startTimer (){
+    timeOutId = setTimeout ( () => window.alert("Hello"), 3000)
+    console.log("Started")
+}
+
+function clearTimer(){
+    clearTimeout(timeOutId);
+    console.log("Cleared");
+}
